@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body,
+div,
+section,
+figure,
+p,
+a,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul {
+  list-style: none; }
+
+li, button {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-size: 1rem;
+  font-family: "Hubballi", sans-serif;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  line-height: normal; }
+  body p {
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  body svg {
+    vertical-align: 0; }
+  body img {
+    vertical-align: 0; }
+  body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: normal;
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  body .fa, body .fas {
+    line-height: normal; }
+  body ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0; }
+  body figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0; }
+  body button, body input, body optgroup, body select, body textarea {
+    font-family: "Hubballi", sans-serif;
+    font-size: 1rem;
+    line-height: normal; }
