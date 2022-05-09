@@ -21,7 +21,11 @@ ul {
     list-style: none;
   }
   
-  li, button {
+  li{
+    display: inline-block;
+    cursor: pointer;
+  }
+  button {
     cursor: pointer;
   }
   

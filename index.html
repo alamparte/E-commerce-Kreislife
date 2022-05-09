@@ -16,6 +16,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Hubballi&family=Quicksand:wght@300&display=swap"
       rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;500&family=Grape+Nuts&family=Handlee&family=Hubballi&family=Indie+Flower&family=Merienda&family=Montserrat:wght@300&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Permanent+Marker&family=Quicksand:wght@300&family=Rubik+Microbe&family=Shadows+Into+Light&family=Water+Brush&display=swap" rel="stylesheet">
       <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,18 +32,19 @@
 <body>
     <div class="grid">
         <header>
-           <!--LOGO-->
-            <figure class="logo">
-                <a href="index.html">
-                    <img class="logo" src="img/logo/logoH.png" alt="el logo es el nombre de la empresa, 'kreis' color amarrilo 'life' color violeta">
-                </a>
-            </figure>
-            <!--MENU MOBILE-->
-            <input type="checkbox">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-            <!--COMIENZO DE NAV-->
+            <!--COMIENZA NAV-->
             <nav>
+                <!--LOGO-->
+                <figure class="logo">
+                    <a href="index.html">
+                        <img class="logo" src="img/logo/logoH.png" alt="el logo es el nombre de la empresa, 'kreis' color amarrilo 'life' color violeta">
+                    </a>
+                </figure>
+                <!--MENU MOBILE-->
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <!--COMIENZO MENU-->
                 <ul class="menu">
                     <li>
                         <a href="index.html">HOME</a>
@@ -53,7 +55,7 @@
                     <li>
                         <a href="#">TIENDA</a>
                         <ul class="submenu">
-                            <li>
+                            <li class="outline">
                                 <a href="pages/tienda.html">VER TODO</a>
                             </li>
                             <li>
@@ -75,13 +77,18 @@
                     </li>
                 </ul>
                 <!--CARRITO DE COMPRAS-->
-                <figure class="carrito">
-                    <a href="">
-                        <img src="img/bag.svg" alt="">
+                <!-- <figure class="carrito">
+                    <a href="pages/tienda.html">
+                        <img src="img/bag.svg" alt="imagen de la bolsa de compras sin relleno">
                     </a>
-                </figure>
+                </figure> -->
             </nav>
             <!--FIN DE NAV-->
+                <figure class="carrito">
+                    <a href="pages/tienda.html">
+                        <img src="img/bag.svg" alt="imagen de la bolsa de compras sin relleno">
+                    </a>
+                </figure>
             <!--ENCABEZADO-->
             <h1>
                 MI RINCÓN DE ARTE
@@ -94,16 +101,16 @@
             <section id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <section class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/carrusel/carruselD.png" class="d-block w-100" alt="mini mandalas, uno con una luna central, otro con el yin-yang en el centro, otro es la flor de la vida circular"/>
-                        <img src="img/carrusel/carruselM.png" class="d-block w-100" alt="mini mandalas, uno con una luna central, otro con el yin-yang en el centro, otro es la flor de la vida circular">
+                        <img src="img/carrusel/carruselD.png" class="desktop w-100" alt="mini mandalas, uno con una luna central, otro con el yin-yang en el centro, otro es la flor de la vida circular"/>
+                        <img src="img/carrusel/carruselM.png" class="mobile w-100" alt="mini mandalas, uno con una luna central, otro con el yin-yang en el centro, otro es la flor de la vida circular">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carrusel/carruselD1.png" class="d-block w-100" alt="mitad de un mandala digital de ocho puntas"/>
-                        <img src="img/carrusel/carruselM1.png" class="d-block w-100" alt="mitad de un mandala digital de ocho puntas">
+                        <img src="img/carrusel/carruselD1.png" class="desktop w-100" alt="mitad de un mandala digital de ocho puntas"/>
+                        <img src="img/carrusel/carruselM1.png" class="mobile w-100" alt="mitad de un mandala digital de ocho puntas">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carrusel/carruselD2.png" class="d-block w-100" alt="mitad de un mandala digital, su centro es una flor de ocho puntas y contiene detalles de hojas pequeñas"/>
-                        <img src="img/carrusel/carruselM2.png" class="d-block w-100" alt="mitad de un mandala digital, su centro es una flor de ocho puntas y contiene detalles de hojas pequeñas">
+                        <img src="img/carrusel/carruselD2.png" class="desktop w-100" alt="mitad de un mandala digital, su centro es una flor de ocho puntas y contiene detalles de hojas pequeñas"/>
+                        <img src="img/carrusel/carruselM2.png" class="mobile w-100" alt="mitad de un mandala digital, su centro es una flor de ocho puntas y contiene detalles de hojas pequeñas">
                      </div>
                 </section>
             </section>
@@ -126,7 +133,7 @@
 
             <!--PRODUCTOS INDEX-->
             <article class="productos">
-                <div class="producto">
+                <div class="productoIndex">
                     <a href="pages/bolsasdetela.html">
                         <img src="img/productos/bolsa3.png" alt="bolsa de tela con fondo verde y lineas delgadas blancas, encima un mandala que cubre todo el frente de la misma">
                     </a>
@@ -134,7 +141,7 @@
                         <a href="pages/bolsasdetela.html">BOLSAS DE TELA</a>
                     </button>
                 </div>
-                <div class="producto">
+                <div class="productoIndex">
                     <a href="pages/stickers.html">
                         <img src="img/productos/sticker2.jpg" alt="es una pegatina/sticker de un mandala redondo, pegado en la computadora, donde se ve el mouse y lapiz">
                     </a>
@@ -142,7 +149,7 @@
                         <a href="pages/stickers.html">STICKERS</a>
                     </button>
                 </div>
-                <div class="producto">
+                <div class="productoIndex">
                     <a href="pages/tazas.html">
                         <img src="img/productos/taza1.jpg" alt="centrada en la foto está la taza con un diseño cover de un mandala, el fondo es blanco, alrededor de la taza, desenfocados aparecen: una laptop, un florero y una ventana">
                     </a>

@@ -1,0 +1,182 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+header{
+    nav{ 
+        padding: 0 1rem; 
+        .logo{
+            @include measures(auto, 80px);
+        }
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: $color-nav;
+        @include flex(space-between, center, 0);
+        @include measures (100%, 6.5rem);
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+        input{
+            display: none;
+        }
+        .fa-bars{
+            display: none;
+        }
+        .fa-times{
+            display: none;
+        }
+        .menu{
+            padding-left: 30rem;
+            li{
+                z-index: 1;
+                font-size: 1.3rem;
+                margin: .6rem;
+                a{
+                    color: black;
+                    &:hover{
+                        color: #c7aef5;
+                    }
+                }
+                &:hover{
+                    > .submenu{
+                    visibility: visible;
+                    opacity: 1;
+                    }
+                }
+                .submenu{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .5s;
+                    background-color: $color-nav;
+                    padding-top: 1.5rem;
+                    box-shadow: 0 1.5px 0 0 rgba(0,0,0,.1);
+                    .outline{
+                        padding-top: 1.5rem;
+                        border-top: solid #CBB5F5 2px;
+                    }
+                    li{
+                        margin: 1.1rem;
+                        padding: 0 .3rem;
+                    }
+                }
+            }
+        }
+        .carrito{
+            a{
+                img{
+                    @include measures (26px, 26px);
+                }
+            }
+        }
+    }
+    h1{
+        margin-top: 6rem;
+        padding: 2.4rem .625rem 2rem .625rem;
+        text-align: center;
+        font-weight: 400;
+        font-size: 2.4rem;
+        font-family: 'Architects Daughter', cursive;
+        color: #b99def;
+    }
+    @media only screen and (max-width: 56.99rem){
+        nav{
+            position: relative;
+            position: fixed;
+            z-index: 1;
+            // display: flex;
+            // justify-content: space-between;
+            input[type="checkbox"]{
+                position: absolute;
+                box-sizing: border-box;
+                left: 0;
+                margin-left: 4.8rem;
+                @include measures (48px, 48px);
+                opacity: 0; 
+            }
+            input{
+                display: block;
+                &:checked{
+                    ~ {
+                        ul{           
+                            position: fixed;
+                            display: block;
+                            top: 5.625rem;
+                            background-color: $color-nav;
+                            box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+                            right: 0;
+                            left: 0;
+                            padding: 0rem;
+                            li{
+                                margin: 0rem;
+                                display: block;
+                                border-bottom: 0.1rem solid #CBB5F5;
+                                padding: 1.3rem 1.3rem 1.3rem 4.6rem;
+                            }
+                            .submenu{
+                                background-color: transparent;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                .outline{
+                                    padding-top: 1.5rem;
+                                    border: none;
+                                }
+                                li{
+                                    padding: 1.5rem 0 1rem 0;
+                                    margin: 0rem;
+                                    border-top: 0.1rem solid #CBB5F5;
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                        .fa-bars{
+                            display: none;
+                        }
+                    }
+                }
+                &:not(:checked) {
+                    ~ {
+                        .fa-times {
+                            display: none;
+                        }
+                    }
+                } 
+            }
+            .fa-bars{
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                left: 0;
+                padding-left: 5rem;
+                @include measures (48px, 48px);
+                font-size: 48px;
+                pointer-events: none;
+                color: #c7aef5;
+            }
+            .fa-times{
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                left: 0;
+                padding-left: 5rem;
+                @include measures (48px, 48px);
+                font-size: 48px;
+                pointer-events: none;
+                color: #c7aef5;
+            }
+            .menu{
+                display: none;
+                >li {
+                    &:hover{
+                        >.submenu{
+                            position: relative;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

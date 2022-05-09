@@ -1,0 +1,56 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+
+.productos{
+    max-width: 1200px;
+    .producto{
+        @include measures (27rem, auto);
+        position: relative;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        display: flex;
+        flex-direction: column;
+        transition: all .4s ease-in-out;
+            &:hover{
+                transform: scale(1.01);
+            }
+        figure{
+            img{
+                @include measures (100%, auto);
+                border-top-left-radius: .25rem;
+                border-top-right-radius: .25rem;
+            }
+        }
+        .productoBody{
+            padding: 1rem;
+            .tituloProducto{
+                font-size: 1.9rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+            }
+            .parrafoProducto{
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                margin-bottom: .5rem;
+            }
+            .precio{
+                font-size: 1.4rem;
+                margin-bottom: .5rem;
+            }
+            .botonProducto{
+                background-color: #cbbde2;
+                color: rgb(100, 43, 154);
+                width: 100%;
+                padding: .7rem;
+                border: none;
+                font-size: 1.7rem;
+                border-radius: .25rem;
+                &:hover{
+                    color: lavender;
+                }
+            }
+        }
+    
+    }
+}
