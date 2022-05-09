@@ -3,7 +3,7 @@
 
 header{
     nav{ 
-        padding: 0 1rem; 
+        padding-left: 5rem; 
         .logo{
             @include measures(auto, 80px);
         }
@@ -24,7 +24,7 @@ header{
             display: none;
         }
         .menu{
-            padding-left: 30rem;
+            margin-left: 25rem;
             li{
                 z-index: 1;
                 font-size: 1.3rem;
@@ -63,6 +63,7 @@ header{
             }
         }
         .carrito{
+            padding: 0 5rem 0 1rem;
             a{
                 img{
                     @include measures (26px, 26px);
@@ -84,13 +85,12 @@ header{
             position: relative;
             position: fixed;
             z-index: 1;
-            // display: flex;
-            // justify-content: space-between;
+            padding-left: 1.5rem;
             input[type="checkbox"]{
                 position: absolute;
                 box-sizing: border-box;
-                left: 0;
-                margin-left: 4.8rem;
+                margin-right: 2rem;
+                right: 0;
                 @include measures (48px, 48px);
                 opacity: 0; 
             }
@@ -147,8 +147,8 @@ header{
                 display: block;
                 position: absolute;
                 box-sizing: border-box;
-                left: 0;
-                padding-left: 5rem;
+                right: 0;
+                padding-right: 4.5rem;
                 @include measures (48px, 48px);
                 font-size: 48px;
                 pointer-events: none;
@@ -158,8 +158,8 @@ header{
                 display: block;
                 position: absolute;
                 box-sizing: border-box;
-                left: 0;
-                padding-left: 5rem;
+                right: 0;
+                padding-right: 4.5rem;
                 @include measures (48px, 48px);
                 font-size: 48px;
                 pointer-events: none;
@@ -175,8 +175,20 @@ header{
                     }
                 }
             }
-
+            .carrito{
+                padding-right: 6rem;
+            }
         }
     }
-
+    @media only screen and (min-width: 57rem) and (max-width: 1260px){
+        nav{
+            padding-left: 2rem;
+            .menu{
+                margin-left: 9rem;
+            }
+            .carrito{
+                padding-right: 2rem;
+            }
+        }
+    }
 }
