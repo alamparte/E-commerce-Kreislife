@@ -1,9 +1,11 @@
 @import "../utilities/mixins";
 @import "../utilities/variables";
+@import "../utilities/maps";
 
 
 .productos{
-    max-width: 1200px;
+    max-width: 1400px;
+    margin: 2rem auto 6rem auto;
     .producto{
         @include measures (27rem, auto);
         position: relative;
@@ -39,18 +41,32 @@
                 margin-bottom: .5rem;
             }
             .botonProducto{
-                background-color: #cbbde2;
-                color: rgb(100, 43, 154);
+                background-color: map-get($map: $colores, $key: hover);
+                color: map-get($map: $colores, $key: details);
                 width: 100%;
                 padding: .7rem;
                 border: none;
                 font-size: 1.7rem;
                 border-radius: .25rem;
                 &:hover{
-                    color: lavender;
+                    color: map-get($map: $colores, $key: laven);
                 }
             }
         }
-    
+    }
+    @media only screen and (max-width: 499px){
+        .producto{
+            @include measures (18.5rem, auto);
+        }
+    }
+    @media only screen and (min-width: 940px) and (max-width: 1014px){ 
+        .producto{
+            @include measures (24.5rem, auto);
+        }
+    }
+    @media only screen and (min-width: 1169px) and (max-width: 1479px){ 
+        .producto{
+            @include measures (22rem, auto);
+        }
     }
 }

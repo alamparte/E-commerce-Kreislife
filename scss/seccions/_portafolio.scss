@@ -1,0 +1,34 @@
+@import "../utilities/mixins";
+.mainPortafolio{
+    max-width: 1200px;
+    margin: 2rem auto 6rem auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); 
+    grid-auto-rows: auto;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    @include measures (100%, auto);
+    img{
+        @include measures (100%, auto);
+        display: block;
+    }
+    @media only screen and (max-width: 467px){ 
+        padding: 0 1.1rem;
+    }
+    @media only screen and (min-width: 468px) and (max-width: 628px){ 
+        padding: 0 4rem;
+    }
+    @media only screen and (min-width: 628px) and (max-width: 727px){ 
+        padding: 0 8rem;
+    }
+    @media only screen and (min-width: 728px) and (max-width: 801px){ 
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); 
+    }
+    @media only screen and (min-width: 979px) and (max-width: 1152px){ 
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); 
+    }
+    @media only screen and (min-width: 728px) and (max-width: 1289px){ 
+        padding: 0 3.5rem;       
+    }
+}

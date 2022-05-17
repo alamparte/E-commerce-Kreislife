@@ -10,14 +10,11 @@
     <title>Home | Kreislife</title>
     <!--favicon-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <!--link de tipografia-->
+    <!--typography link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hubballi&family=Quicksand:wght@300&display=swap"
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;500&family=Grape+Nuts&family=Handlee&family=Hubballi&family=Indie+Flower&family=Merienda&family=Montserrat:wght@300&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Permanent+Marker&family=Quicksand:wght@300&family=Rubik+Microbe&family=Shadows+Into+Light&family=Water+Brush&display=swap" rel="stylesheet">
-      <!-- icon library -->
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Handlee&display=swap" rel="stylesheet">
+      <!-- library icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--link bootstrap-->
@@ -76,6 +73,7 @@
                         <a href="pages/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
+                <!--FIN MENU-->
                 <!--CARRITO DE COMPRAS-->
                 <figure class="carrito">
                     <a href="pages/tienda.html">
@@ -85,7 +83,7 @@
             </nav>
             <!--FIN DE NAV-->
             <!--ENCABEZADO-->
-            <h1>
+            <h1 class="titleIndex">
                 MI RINCÓN DE ARTE
             </h1>
         </header>
@@ -109,52 +107,68 @@
                      </div>
                 </section>
             </section>
-            <!--BIO INDEX-->
-            <section class="bioIndex">
-                <div>
-                    <h2>
-                        Hola, soy Ariadna
-                    </h2>
-                    <p class="bioTextIndex">
-                        Viajera del mundo y artista de la vida. Me especializo en mandalas de todos los tamaños y texturas, producción e intervención de productos de edición limitada.
-                    </p>
-                    <button><a href="pages/bio.html">leer más</a></button>
-                </div>
-                <figure class="bioImgIndex">
-                    <img src="img/bio/bio.png" alt="imagen de la artista en verano, en un pasillo con macetas, con flores rojas, a lo largo del camino">
-                </figure>
-            </section>
-            <!--FIN BIO INDEX-->
 
             <!--PRODUCTOS INDEX-->
-            <article class="productos">
-                <div class="productoIndex">
+            <article class="productosIndex">
+                <!-- <div class="productoIndex">
                     <a href="pages/bolsasdetela.html">
                         <img src="img/productos/bolsa3.png" alt="bolsa de tela con fondo verde y lineas delgadas blancas, encima un mandala que cubre todo el frente de la misma">
                     </a>
-                    <button>
+                    <h2 class="titleP">
                         <a href="pages/bolsasdetela.html">BOLSAS DE TELA</a>
-                    </button>
+                    </h2>
                 </div>
                 <div class="productoIndex">
                     <a href="pages/stickers.html">
                         <img src="img/productos/sticker2.jpg" alt="es una pegatina/sticker de un mandala redondo, pegado en la computadora, donde se ve el mouse y lapiz">
                     </a>
-                    <button>
+                    <h3 class="titleP">
                         <a href="pages/stickers.html">STICKERS</a>
-                    </button>
+                    </h3>
                 </div>
                 <div class="productoIndex">
                     <a href="pages/tazas.html">
                         <img src="img/productos/taza1.jpg" alt="centrada en la foto está la taza con un diseño cover de un mandala, el fondo es blanco, alrededor de la taza, desenfocados aparecen: una laptop, un florero y una ventana">
                     </a>
-                    <button>
+                    <h3 class="titleP">
                         <a href="pages/tazas.html">TAZAS</a>
-                    </button>
-                </div>
+                    </h3>
+                </div> -->
+                <section class="productoIndex">
+                    <div>
+                        <h2><a href="pages/bolsasdetela.html">BOLSAS DE TELA</a></h2>
+                        <p>Esta bolsa all over es una adición versátil apta para cualquier look. Soporta hasta 20kg y sus asas están hechas 100% de algodón natural</p>
+                    </div>
+                    <figure>
+                        <a href="pages/bolsasdetela.html">
+                            <img src="img/productos/bolsa3.png" alt="bolsa de tela con fondo verde y lineas delgadas blancas, encima un mandala que cubre todo el frente de la misma">
+                        </a>
+                    </figure>
+                </section>
+                <section class="productoIndex">
+                    <figure>
+                        <a href="pages/stickers.html">
+                            <img src="img/productos/sticker2.jpg" alt="es una pegatina/sticker de un mandala redondo, pegado en la computadora, donde se ve el mouse y lapiz">
+                        </a>
+                    </figure>
+                    <div>
+                        <h2><a href="pages/stickers.html">STICKERS</a></h2>
+                        <p>Esta pegatina es ideal para personalizar lo que tu quieras. Su aplicación es anti-burbujas rápida y sencilla</p>
+                    </div>
+                </section>
+                <section class="productoIndex">
+                    <div>
+                        <h2><a href="pages/tazas.html">TAZAS</a></h2>
+                        <p>Esta taza es perfecta para tu café de la mañana, un té calentito por la tarde o la bebida caliente que más te guste.</p>
+                    </div>
+                    <figure>
+                        <a href="pages/tazas.html">
+                            <img src="img/productos/taza1.jpg" alt="centrada en la foto está la taza con un diseño cover de un mandala, el fondo es blanco, alrededor de la taza, desenfocados aparecen: una laptop, un florero y una ventana">
+                        </a>
+                    </figure>
+                </section>
             </article>
             <!--FIN PRODUCTOS INDEX-->
-
             <!--PORTAFOLIO INDEX-->
             <section class="portafolioIndex">
                 <img src="img/portafolio/1.jpg" alt="mandala con centro de la flor de la vida, creado en negro con microfibra">
@@ -169,6 +183,17 @@
                 <img src="img/portafolio/11.jpg" alt="mandala con una luna de lineas en el centro">
             </section>
             <!--FIN PORTAFOLIO INDEX-->
+            <!--BIO INDEX-->
+            <section class="bioIndex">
+                <h2>
+                    HOLA, SOY ARIADNA
+                </h2>
+                <p class="bioTextIndex">
+                    Viajera del mundo y artista de la vida. Me especializo en mandalas de todos los tamaños y texturas, producción e intervención de productos de edición limitada.
+                </p>
+                <button><a href="pages/bio.html">LEER MÁS</a></button>
+            </section>
+            <!--FIN BIO INDEX-->
         </main>
         <!--FIN INFO DEL SITIO-->
         <!--INCIO DE FOOTER-->
@@ -207,9 +232,9 @@
                 </div>
             </section>
             <section class="containerRight">
-                <h3 class="tituloFooter">
+                <h4 class="tituloFooter">
                     NEWSLETTER
-                </h3>
+                </h4>
                 <form action="#">
                     <input type="email" placeholder="Correo electrónico"/>
                 </form>
@@ -224,6 +249,7 @@
         </footer>
         <!--FIN FOOTER-->
     </div>
+    <!--Bootstrap JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

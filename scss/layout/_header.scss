@@ -1,9 +1,10 @@
 @import "../utilities/mixins";
 @import "../utilities/variables";
+@import "../utilities/maps";
 
 header{
     nav{ 
-        padding-left: 5rem; 
+        padding: 0 3rem;
         .logo{
             @include measures(auto, 80px);
         }
@@ -24,15 +25,15 @@ header{
             display: none;
         }
         .menu{
-            margin-left: 25rem;
             li{
                 z-index: 1;
-                font-size: 1.3rem;
                 margin: .6rem;
+                padding: 0 .5rem;
                 a{
-                    color: black;
+                    font-size: 1.2rem;
+                    color: map-get($map: $colores, $key: a);
                     &:hover{
-                        color: #c7aef5;
+                        color: map-get($map: $colores, $key: hover);
                     }
                 }
                 &:hover{
@@ -63,35 +64,48 @@ header{
             }
         }
         .carrito{
-            padding: 0 5rem 0 1rem;
             a{
                 img{
-                    @include measures (26px, 26px);
+                    @include measures (22px, 22px);
                 }
             }
         }
     }
+    .titleIndex{
+        margin-top: 5.5rem;
+        padding-bottom: 0;
+        background-color: map-get($map: $colores, $key: laven);
+    }
     h1{
-        margin-top: 6rem;
-        padding: 2.4rem .625rem 2rem .625rem;
+        margin-top: 7.5rem;
+        padding: 1.5rem 0 .7rem 0;
         text-align: center;
-        font-weight: 400;
-        font-size: 2.4rem;
-        font-family: 'Architects Daughter', cursive;
-        color: #b99def;
+        font-size: 2rem;
+        font-family: $font-secundaria;
+        color: map-get($map: $colores, $key: title);
+        font-weight: 500;
+    }
+    @media only screen and (max-width: 468px){
+        nav{
+            .logo{
+                @include measures(auto, 65px);
+            }
+        }
+        h1{
+            font-size: 1.65rem;
+        }
     }
     @media only screen and (max-width: 56.99rem){
         nav{
             position: relative;
             position: fixed;
             z-index: 1;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
             input[type="checkbox"]{
                 position: absolute;
                 box-sizing: border-box;
-                margin-right: 2rem;
-                right: 0;
-                @include measures (48px, 48px);
+                right: 4.4%;
+                @include measures (42px, 42px);
                 opacity: 0; 
             }
             input{
@@ -107,6 +121,7 @@ header{
                             right: 0;
                             left: 0;
                             padding: 0rem;
+                            margin: 0;
                             li{
                                 margin: 0rem;
                                 display: block;
@@ -118,6 +133,7 @@ header{
                                 box-shadow: none;
                                 padding: 0;
                                 margin: 0;
+                                transition: all .7s ease-in-out;
                                 .outline{
                                     padding-top: 1.5rem;
                                     border: none;
@@ -149,10 +165,10 @@ header{
                 box-sizing: border-box;
                 right: 0;
                 padding-right: 4.5rem;
-                @include measures (48px, 48px);
-                font-size: 48px;
+                @include measures (42px, 42px);
+                font-size: 42px;
                 pointer-events: none;
-                color: #c7aef5;
+                color: map-get($map: $colores, $key: details);
             }
             .fa-times{
                 display: block;
@@ -160,10 +176,10 @@ header{
                 box-sizing: border-box;
                 right: 0;
                 padding-right: 4.5rem;
-                @include measures (48px, 48px);
-                font-size: 48px;
+                @include measures (42px, 42px);
+                font-size: 42px;
                 pointer-events: none;
-                color: #c7aef5;
+                color: map-get($map: $colores, $key: details);
             }
             .menu{
                 display: none;
@@ -176,18 +192,17 @@ header{
                 }
             }
             .carrito{
-                padding-right: 6rem;
+                padding-right: 3.1rem;
             }
         }
     }
     @media only screen and (min-width: 57rem) and (max-width: 1260px){
         nav{
-            padding-left: 2rem;
             .menu{
-                margin-left: 9rem;
-            }
-            .carrito{
-                padding-right: 2rem;
+                margin-left: 0;
+                li{
+                    padding: 0 .5rem 0 .5rem;
+                }
             }
         }
     }

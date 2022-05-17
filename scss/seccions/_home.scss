@@ -1,0 +1,220 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+
+//margin: 1.5rem 0 4rem 0; 
+
+
+main{
+    .productosIndex{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        @include measures (100%, auto);
+        margin: 5rem 0;
+        gap: 2rem;
+        .productoIndex{
+            position: relative;
+            @include measures (100%, auto);
+            flex-direction: row;
+            @include flex (center, center, 2rem);
+            div{
+                text-align: center;
+                @include measures (18rem, auto);
+                h2{
+                    font-size: 1.8rem;
+                    padding: 1.5rem 0;
+                    a{
+                        color: map-get($map: $colores, $key: title);
+                        &:hover{
+                            color: map-get($map: $colores, $key: hover);
+                        }    
+                    }
+                }
+                p{
+                    font-size: 1.4rem;
+                    line-height: 2.3rem;
+                }
+            }
+            figure{
+                @include measures (33rem, auto);
+                a{
+                    img{
+                        @include measures (100%, auto);
+                        border-radius: .20rem
+                    }
+                }
+            }
+        }
+    }
+    .portafolioIndex{
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        grid-auto-rows: auto;
+        gap: 1.2rem;
+        padding: 5rem 1.3rem;
+        @include measures (100%, auto);
+        justify-items: center;
+        align-items: center;
+        background-color: lavender;
+        img{
+            @include measures (100%, auto);
+        }
+    }
+    .bioIndex{
+        // border: #CBB5F5 solid .1rem;
+        @include measures (70rem, auto);
+        @include flex (center, center, 0);
+        flex-direction: column;
+        margin: 4rem auto;
+            h2{
+                font-size: 2rem;
+                color: map-get($map: $colores, $key: title);
+                font-family: $font-secundaria;
+            }
+            p{
+                font-size: 1.4rem;
+                line-height: 2.3rem;
+                padding: 1.3rem 0 1.9rem 0;
+                text-align: center;
+            }
+            button{
+                background-color: map-get($map: $colores, $key: hover);
+                font-size: 1.7rem;
+                border: none;
+                border-radius: 0.20rem;
+                padding: .9rem 1.4rem .9rem 1.4rem;
+                a{
+                    color: map-get($map: $colores, $key: details);
+                    &:hover {
+                    color: map-get($map: $colores, $key: laven);
+                    }
+                }
+            }
+    }
+
+    // @media only screen and (max-width: 724px){
+    //     .portafolioIndex{
+    //         padding: 0 5rem;
+    //     }
+    // }
+    // @media only screen and (max-width: 768px){
+    //     .bioIndex{
+    //         flex-direction: column-reverse;
+    //         padding: 4rem;
+    //         gap: 3rem;
+    //         div{
+    //             padding: 0;
+    //             width: 100%;
+    //             h2{
+    //                 font-size: 2.5rem;
+    //             }
+    //             p{
+    //                 font-size: 1.8rem;
+    //                 line-height: 2.4rem;
+    //             }
+    //             button{
+    //                 font-size: 1.9rem;
+    //             }
+    //         }
+    //         .bioImgIndex{
+    //             width: 100%;
+    //             padding: 0;
+    //             img{
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+    //     .productosIndex{
+    //         gap: 0;
+    //         padding: 0 3rem;
+    //         .productoIndex{
+    //             .titleP{
+    //                 padding: 2rem 0;
+    //             }
+    //         }
+    //     }
+    //     .portafolioIndex{
+    //         img{
+    //         }
+    //     }
+    // }
+    // @media only screen and (min-width: 769px) and (max-width: 900px){
+    //     .bioIndex{
+    //         flex-direction: column-reverse;
+    //         padding: 4rem 5rem;
+    //         gap: 2rem;
+    //         div{
+    //             width: 90%;
+    //             padding: 1.5rem 0 1.5rem 1.5rem;
+    //             h2{
+    //                 font-size: 2.5rem;
+    //             }
+    //             p{
+    //                 font-size: 1.8rem;
+    //                 line-height: 2.4rem;
+    //             }
+    //             button{
+    //                 font-size: 1.9rem;
+    //             }
+    //         }
+    //         .bioImgIndex{
+    //             padding: 1.5rem;
+    //             width: 90%;
+    //             img{
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+    //     .productosIndex{
+    //         gap: 0;
+    //         padding: 0 5rem;
+    //         .productoIndex{
+    //             .titleP{
+    //                 padding: 2rem 0;
+    //             }
+    //         }
+    //     }
+    //     .portafolioIndex{
+    //         img{
+    //         }
+    //     }
+    // }
+    // @media only screen and (max-width: 1460px){
+    //     .bioIndex{
+    //         div{
+    //             padding: 1rem;
+    //         }
+    //         .bioImgIndex{
+    //              width: 100%;
+    //              padding: 0;
+    //         }
+    //     }
+    // }
+    // @media only screen and (max-width: 1199px){
+    //     .bioIndex{
+    //         flex-direction: column-reverse;
+    //         padding: 4rem 5rem;
+    //         gap: 2rem;
+    //         div{
+    //             padding: 0;
+    //             width: 70%;
+    //         }
+    //         .bioImgIndex{
+    //              width: 70%;
+    //              padding: 0;
+    //         }
+    //     }
+    // }
+    // @media only screen and (max-width: 1760px){
+    //     .bioIndex{
+    //         div{
+    //             padding: 3rem;
+    //         }
+    //         .bioImgIndex{
+    //              width: 80%;
+    //              padding: 0;
+    //         }
+    //     }
+    // }
+}
