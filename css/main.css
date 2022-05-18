@@ -80,60 +80,69 @@ body {
   .carousel .mobile {
     display: none; } }
 
-.productos {
-  max-width: 1400px;
-  margin: 2rem auto 6rem auto; }
-  .productos .producto {
-    width: 27rem;
+.productos .producto {
+  width: 27rem;
+  height: auto;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  transition: all .4s ease-in-out; }
+  .productos .producto:hover {
+    transform: scale(1.01); }
+  .productos .producto figure img {
+    width: 100%;
     height: auto;
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: .25rem;
-    display: flex;
-    flex-direction: column;
-    transition: all .4s ease-in-out; }
-    .productos .producto:hover {
-      transform: scale(1.01); }
-    .productos .producto figure img {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem; }
+  .productos .producto .productoBody {
+    padding: 1rem; }
+    .productos .producto .productoBody .tituloProducto {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: .5rem; }
+    .productos .producto .productoBody .parrafoProducto {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-bottom: .5rem; }
+    .productos .producto .productoBody .precio {
+      font-size: 1.4rem;
+      margin-bottom: .5rem; }
+    .productos .producto .productoBody .botonProducto {
+      background-color: #c7aef5;
+      color: #8f5bd8;
       width: 100%;
-      height: auto;
-      border-top-left-radius: .25rem;
-      border-top-right-radius: .25rem; }
-    .productos .producto .productoBody {
-      padding: 1rem; }
-      .productos .producto .productoBody .tituloProducto {
-        font-size: 1.9rem;
-        font-weight: 500;
-        margin-bottom: .5rem; }
-      .productos .producto .productoBody .parrafoProducto {
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-        margin-bottom: .5rem; }
-      .productos .producto .productoBody .precio {
-        font-size: 1.4rem;
-        margin-bottom: .5rem; }
-      .productos .producto .productoBody .botonProducto {
-        background-color: #c7aef5;
-        color: #8f5bd8;
-        width: 100%;
-        padding: .7rem;
-        border: none;
-        font-size: 1.7rem;
-        border-radius: .25rem; }
-        .productos .producto .productoBody .botonProducto:hover {
-          color: lavender; }
-  @media only screen and (max-width: 499px) {
-    .productos .producto {
-      width: 18.5rem;
-      height: auto; } }
-  @media only screen and (min-width: 940px) and (max-width: 1014px) {
-    .productos .producto {
-      width: 24.5rem;
-      height: auto; } }
-  @media only screen and (min-width: 1169px) and (max-width: 1479px) {
-    .productos .producto {
-      width: 22rem;
-      height: auto; } }
+      padding: .7rem;
+      border: none;
+      font-size: 1.7rem;
+      border-radius: .25rem; }
+      .productos .producto .productoBody .botonProducto:hover {
+        color: lavender; }
+
+@media only screen and (max-width: 499px) {
+  .productos .producto {
+    width: 18.5rem;
+    height: auto; }
+    .productos .producto .productoBody .parrafoProducto {
+      font-size: 1.29rem; }
+    .productos .producto .productoBody .botonProducto {
+      font-size: 1.5rem; } }
+
+@media only screen and (min-width: 850px) and (max-width: 939px) {
+  .productos .producto {
+    width: 24.7rem;
+    height: auto; } }
+
+@media only screen and (min-width: 940px) and (max-width: 1014px) {
+  .productos .producto {
+    width: 24.5rem;
+    height: auto; } }
+
+@media only screen and (min-width: 1169px) and (max-width: 1479px) {
+  .productos .producto {
+    width: 22rem;
+    height: auto; } }
 
 header nav {
   padding: 0 3rem;
@@ -539,7 +548,7 @@ footer {
 .mainBio {
   width: 100%;
   height: auto;
-  margin: 1.5rem 0 4rem 0; }
+  margin: .9rem 0 4rem 0; }
   .mainBio .textBio {
     text-align: center;
     width: 65rem;
@@ -616,32 +625,32 @@ footer {
 
 .productos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-auto-rows: auto;
-  row-gap: 2.4rem;
-  column-gap: 1.5rem;
+  row-gap: 2.3rem;
   align-items: center;
   justify-items: center;
+  max-width: 1400px;
+  margin: .9rem auto 6rem auto;
   width: 100%;
   height: auto; }
   @media only screen and (max-width: 499px) {
     .productos {
       grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
-      margin: 1.5rem 0 4rem 0;
-      padding: 0; } }
+      margin: .8rem 0 4rem 0; } }
   @media only screen and (min-width: 500px) and (max-width: 1012px) {
     .productos {
       padding: 0 1.2rem; } }
-  @media only screen and (min-width: 940px) and (max-width: 1169px) {
+  @media only screen and (min-width: 850px) and (max-width: 939px) {
     .productos {
-      column-gap: 0; } }
+      column-gap: 1.5rem;
+      padding: 0 1.5rem; } }
   @media only screen and (min-width: 1013px) and (max-width: 1119px) {
     .productos {
       padding: 0 2.6rem; } }
   @media only screen and (min-width: 1169px) and (max-width: 1479px) {
     .productos {
       grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-      column-gap: 0;
       padding: 0 1.2rem; } }
 
 .mainContacto {
@@ -748,14 +757,14 @@ main .productosIndex {
 
 main .portafolioIndex {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-  grid-auto-rows: auto;
-  gap: 1.2rem;
-  padding: 5rem 1.3rem;
-  width: 100%;
-  height: auto;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  grid-template-rows: auto;
   justify-items: center;
   align-items: center;
+  gap: 1.2rem;
+  padding: 5rem 5rem;
+  width: 100%;
+  height: auto;
   background-color: lavender; }
   main .portafolioIndex img {
     width: 100%;
@@ -803,29 +812,128 @@ main .bioIndex {
         width: auto;
         height: auto; }
         main .productosIndex .productoIndex div p {
-          padding: 0 1.1rem; }
+          width: 75%;
+          height: auto;
+          margin: 0 auto; }
         main .productosIndex .productoIndex div button {
           font-size: 1.3rem; }
       main .productosIndex .productoIndex figure {
-        width: auto;
-        height: auto;
-        padding: 0 2rem;
-        margin-top: 2rem; }
-  main .portafolioIndex img {
-    width: 90%;
-    height: auto; }
+        margin-top: 2rem;
+        width: 85%;
+        height: auto; }
   main .bioIndex {
-    width: auto;
-    height: auto;
-    padding: 0 1.1rem; }
+    width: 70%;
+    height: auto; }
+    main .bioIndex h2 {
+      font-size: 1.6rem; }
+    main .bioIndex button {
+      font-size: 1.6rem; } }
+
+@media only screen and (min-width: 469px) and (max-width: 768px) {
+  main .productosIndex {
+    margin-top: 1rem;
+    gap: 0; }
+    main .productosIndex #sticker {
+      flex-direction: column-reverse; }
+    main .productosIndex .productoIndex {
+      flex-direction: column;
+      gap: 0; }
+      main .productosIndex .productoIndex div {
+        width: auto;
+        height: auto; }
+        main .productosIndex .productoIndex div p {
+          width: 75%;
+          height: auto;
+          margin: 0 auto; }
+        main .productosIndex .productoIndex div button {
+          font-size: 1.4rem; }
+      main .productosIndex .productoIndex figure {
+        width: 79%;
+        height: auto;
+        margin-top: 2rem; }
+  main .bioIndex {
+    width: 70%;
+    height: auto; }
     main .bioIndex h2 {
       font-size: 1.7rem; }
     main .bioIndex button {
       font-size: 1.6rem; } }
 
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  main .productosIndex {
+    margin: 2rem auto;
+    width: 90%;
+    height: auto; }
+    main .productosIndex .productoIndex {
+      gap: 1.5rem; }
+      main .productosIndex .productoIndex div {
+        width: 80%;
+        height: auto; }
+        main .productosIndex .productoIndex div p {
+          font-size: 1.39rem; }
+        main .productosIndex .productoIndex div button {
+          font-size: 1.4rem; }
+      main .productosIndex .productoIndex figure {
+        width: 80%;
+        height: auto;
+        margin-top: 0; }
+  main .bioIndex {
+    width: 80%;
+    height: auto; }
+    main .bioIndex h2 {
+      font-size: 1.7rem; }
+    main .bioIndex button {
+      font-size: 1.6rem; } }
+
+@media only screen and (max-width: 499px) {
+  main .portafolioIndex {
+    gap: 1.3rem;
+    padding: 5rem 1.1rem; }
+    main .portafolioIndex img {
+      width: 75%;
+      height: auto; } }
+
+@media only screen and (min-width: 500px) and (max-width: 623px) {
+  main .portafolioIndex {
+    gap: 1.2rem;
+    padding: 5rem 1.5rem; }
+    main .portafolioIndex img {
+      width: 73%;
+      height: auto; } }
+
+@media only screen and (min-width: 624px) and (max-width: 747px) {
+  main .portafolioIndex {
+    gap: 1.2rem; }
+    main .portafolioIndex img {
+      width: 75%;
+      height: auto; } }
+
+@media only screen and (min-width: 739px) and (max-width: 747px) {
+  main .portafolioIndex {
+    padding: 5rem 4rem;
+    gap: 1.2rem 0; }
+    main .portafolioIndex img {
+      width: 95%;
+      height: auto; } }
+
+@media only screen and (min-width: 768px) and (max-width: 924px) {
+  main .portafolioIndex {
+    padding: 5rem 4.5rem; }
+    main .portafolioIndex img {
+      width: 90%;
+      height: auto; } }
+
+@media only screen and (min-width: 761px) and (max-width: 793px) {
+  main .portafolioIndex {
+    padding: 5rem 4.5rem;
+    gap: 1.2rem 0; }
+    main .portafolioIndex img {
+      width: 95%;
+      height: auto; } }
+
 .mainPortafolio {
   max-width: 1200px;
-  margin: 2rem auto 6rem auto;
+  margin: 1rem auto 6rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-auto-rows: auto;

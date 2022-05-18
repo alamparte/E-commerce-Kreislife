@@ -3,7 +3,7 @@
 
 .mainBio{
     @include measures(100%, auto);
-    margin: 1.5rem 0 4rem 0;
+    margin: .9rem 0 4rem 0;
     .textBio{
         text-align: center;
         @include measures(65rem, auto);
