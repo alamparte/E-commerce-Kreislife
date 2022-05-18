@@ -2,16 +2,13 @@
 @import "../utilities/variables";
 
 
-//margin: 1.5rem 0 4rem 0; 
-
-
 main{
     .productosIndex{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         @include measures (100%, auto);
-        margin: 5rem 0;
+        margin: 3rem 0;
         gap: 2rem;
         .productoIndex{
             position: relative;
@@ -33,7 +30,21 @@ main{
                 }
                 p{
                     font-size: 1.4rem;
-                    line-height: 2.3rem;
+                    line-height: 2.2rem;
+                }
+                button{
+                    margin-top: 1.5rem;
+                    padding: .8rem;
+                    border: #8f5bd8 solid .03rem;
+                    font-size: 1.3rem;
+                    border-radius: 0.20rem;
+                    background-color: map-get($map: $colores, $key: textF);
+                    &:hover{
+                        background-color: map-get($map: $colores, $key: laven);
+                    }
+                    a{
+                        color: map-get($map: $colores, $key: details);
+                    }
                 }
             }
             figure{
@@ -62,159 +73,77 @@ main{
         }
     }
     .bioIndex{
-        // border: #CBB5F5 solid .1rem;
         @include measures (70rem, auto);
         @include flex (center, center, 0);
         flex-direction: column;
         margin: 4rem auto;
-            h2{
-                font-size: 2rem;
-                color: map-get($map: $colores, $key: title);
-                font-family: $font-secundaria;
-            }
-            p{
-                font-size: 1.4rem;
-                line-height: 2.3rem;
-                padding: 1.3rem 0 1.9rem 0;
-                text-align: center;
-            }
-            button{
-                background-color: map-get($map: $colores, $key: hover);
-                font-size: 1.7rem;
-                border: none;
-                border-radius: 0.20rem;
-                padding: .9rem 1.4rem .9rem 1.4rem;
-                a{
-                    color: map-get($map: $colores, $key: details);
-                    &:hover {
-                    color: map-get($map: $colores, $key: laven);
-                    }
+        h2{
+            font-size: 2rem;
+            color: map-get($map: $colores, $key: title);
+            font-family: $font-secundaria;
+        }
+        p{
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            padding: 1.3rem 0 1.9rem 0;
+            text-align: center;
+        }
+        button{
+            background-color: map-get($map: $colores, $key: hover);
+            font-size: 1.7rem;
+            border: none;
+            border-radius: 0.20rem;
+            padding: .9rem 1.4rem .9rem 1.4rem;
+            a{
+                color: map-get($map: $colores, $key: details);
+                &:hover {
+                color: map-get($map: $colores, $key: laven);
                 }
             }
+        }
     }
 
-    // @media only screen and (max-width: 724px){
-    //     .portafolioIndex{
-    //         padding: 0 5rem;
-    //     }
-    // }
-    // @media only screen and (max-width: 768px){
-    //     .bioIndex{
-    //         flex-direction: column-reverse;
-    //         padding: 4rem;
-    //         gap: 3rem;
-    //         div{
-    //             padding: 0;
-    //             width: 100%;
-    //             h2{
-    //                 font-size: 2.5rem;
-    //             }
-    //             p{
-    //                 font-size: 1.8rem;
-    //                 line-height: 2.4rem;
-    //             }
-    //             button{
-    //                 font-size: 1.9rem;
-    //             }
-    //         }
-    //         .bioImgIndex{
-    //             width: 100%;
-    //             padding: 0;
-    //             img{
-    //                 width: 100%;
-    //             }
-    //         }
-    //     }
-    //     .productosIndex{
-    //         gap: 0;
-    //         padding: 0 3rem;
-    //         .productoIndex{
-    //             .titleP{
-    //                 padding: 2rem 0;
-    //             }
-    //         }
-    //     }
-    //     .portafolioIndex{
-    //         img{
-    //         }
-    //     }
-    // }
-    // @media only screen and (min-width: 769px) and (max-width: 900px){
-    //     .bioIndex{
-    //         flex-direction: column-reverse;
-    //         padding: 4rem 5rem;
-    //         gap: 2rem;
-    //         div{
-    //             width: 90%;
-    //             padding: 1.5rem 0 1.5rem 1.5rem;
-    //             h2{
-    //                 font-size: 2.5rem;
-    //             }
-    //             p{
-    //                 font-size: 1.8rem;
-    //                 line-height: 2.4rem;
-    //             }
-    //             button{
-    //                 font-size: 1.9rem;
-    //             }
-    //         }
-    //         .bioImgIndex{
-    //             padding: 1.5rem;
-    //             width: 90%;
-    //             img{
-    //                 width: 100%;
-    //             }
-    //         }
-    //     }
-    //     .productosIndex{
-    //         gap: 0;
-    //         padding: 0 5rem;
-    //         .productoIndex{
-    //             .titleP{
-    //                 padding: 2rem 0;
-    //             }
-    //         }
-    //     }
-    //     .portafolioIndex{
-    //         img{
-    //         }
-    //     }
-    // }
-    // @media only screen and (max-width: 1460px){
-    //     .bioIndex{
-    //         div{
-    //             padding: 1rem;
-    //         }
-    //         .bioImgIndex{
-    //              width: 100%;
-    //              padding: 0;
-    //         }
-    //     }
-    // }
-    // @media only screen and (max-width: 1199px){
-    //     .bioIndex{
-    //         flex-direction: column-reverse;
-    //         padding: 4rem 5rem;
-    //         gap: 2rem;
-    //         div{
-    //             padding: 0;
-    //             width: 70%;
-    //         }
-    //         .bioImgIndex{
-    //              width: 70%;
-    //              padding: 0;
-    //         }
-    //     }
-    // }
-    // @media only screen and (max-width: 1760px){
-    //     .bioIndex{
-    //         div{
-    //             padding: 3rem;
-    //         }
-    //         .bioImgIndex{
-    //              width: 80%;
-    //              padding: 0;
-    //         }
-    //     }
-    // }
+    @media only screen and (max-width: 468px){
+        .productosIndex{
+            margin-top: .5rem;
+            #sticker{
+                flex-direction: column-reverse;
+            }
+            gap: 0;
+            .productoIndex{
+                flex-direction: column;
+                gap: 0;
+                div{
+                    @include measures (auto, auto);
+                    p{
+                        padding: 0 1.1rem;
+                    }
+                    button{
+                        font-size: 1.3rem;
+                    }
+                }
+                figure{
+                    @include measures (auto, auto);
+                    padding: 0 2rem;
+                    margin-top: 2rem; 
+                }
+            }
+        }
+        .portafolioIndex{
+            img{
+                @include measures (90%, auto);
+            }
+        }
+        .bioIndex{
+            @include measures (auto, auto);
+            padding: 0 1.1rem;
+            h2{
+                font-size: 1.7rem;
+            }
+            button{
+                font-size: 1.6rem;
+            }
+        }
+    }
+
 }
