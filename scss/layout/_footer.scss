@@ -133,9 +133,8 @@ footer{
                 grid-area: containerRight;
                 padding: 1rem;
                 @include measures (100%, auto);
-                border: #CBB5F5 solid .1rem;
+                @extend %border;
                 font-size: 1.18rem;
-                border-radius: 0.20rem;
                 &:focus{
                     border-color: map-get($map: $colores, $key: focus);
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

@@ -117,7 +117,7 @@ body {
       border: none;
       font-size: 1.7rem;
       border-radius: .25rem; }
-      .productos .producto .productoBody .botonProducto:hover {
+      .productos .producto .productoBody .botonProducto a:hover {
         color: lavender; }
 
 @media only screen and (max-width: 499px) {
@@ -149,7 +149,7 @@ header nav {
   position: fixed;
   top: 0;
   z-index: 1;
-  background-color: #fdfdfd;
+  background-color: #f7f7ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -185,7 +185,7 @@ header nav {
       visibility: hidden;
       opacity: 0;
       transition: .5s;
-      background-color: #fdfdfd;
+      background-color: #f7f7ff;
       padding-top: 1.5rem;
       box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1); }
       header nav .menu li .submenu .outline {
@@ -201,7 +201,7 @@ header nav {
 header .titleIndex {
   margin-top: 5.5rem;
   padding-bottom: 0;
-  background-color: lavender; }
+  background-color: #eae2fb; }
 
 header h1 {
   margin-top: 7.5rem;
@@ -238,7 +238,7 @@ header h1 {
         position: fixed;
         display: block;
         top: 5.625rem;
-        background-color: #fdfdfd;
+        background-color: #f7f7ff;
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
         right: 0;
         left: 0;
@@ -434,9 +434,7 @@ footer {
         padding: 1rem;
         width: 100%;
         height: auto;
-        border: #CBB5F5 solid .1rem;
-        font-size: 1.18rem;
-        border-radius: 0.20rem; }
+        font-size: 1.18rem; }
         footer .containerRight form input:focus {
           border-color: #872bdd;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -686,6 +684,8 @@ footer {
       padding: 1rem;
       font-size: 1.2rem;
       border: #CBB5F5 solid .1rem; }
+      .mainContacto .contacto textarea placeholder {
+        font-size: large; }
       .mainContacto .contacto textarea:focus {
         border-color: #872bdd;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -964,3 +964,7 @@ main .bioIndex {
   @media only screen and (min-width: 728px) and (max-width: 1289px) {
     .mainPortafolio {
       padding: 0 3.5rem; } }
+
+footer .containerRight form input {
+  border: #CBB5F5 solid .1rem;
+  border-radius: 0.20rem; }

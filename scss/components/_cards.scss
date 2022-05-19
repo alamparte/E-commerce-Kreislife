@@ -46,8 +46,10 @@
                 border: none;
                 font-size: 1.7rem;
                 border-radius: .25rem;
-                &:hover{
-                    color: map-get($map: $colores, $key: laven);
+                a{
+                    &:hover{
+                        color: map-get($map: $colores, $key: laven);
+                    }
                 }
             }
         }

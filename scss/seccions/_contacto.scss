@@ -34,6 +34,9 @@
             padding: 1rem;
             font-size: 1.2rem;
             border: #CBB5F5 solid .1rem;
+            placeholder{
+                font-size: large;
+            }
             &:focus{
                 border-color: map-get($map: $colores, $key: focus);
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -46,7 +49,7 @@
             padding: 1rem;
             border: none;
             border-radius: 0.20rem;
-            background-color: #CBB5F5;
+            background-color: map-get($map: $colores, $key: boton);
             color: map-get($map: $colores, $key: laven);
             &:hover{
                 color: map-get($map: $colores, $key: focus);
