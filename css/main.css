@@ -254,7 +254,7 @@ header h1 {
           box-shadow: none;
           padding: 0;
           margin: 0;
-          transition: all .7s ease-in-out; }
+          transition: all .5s ease-in-out; }
           header nav input:checked ~ ul .submenu .outline {
             padding-top: 1.5rem;
             border: none; }
@@ -755,20 +755,21 @@ main .productosIndex {
         height: auto;
         border-radius: .20rem; }
 
-main .portafolioIndex {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
-  grid-template-rows: auto;
-  justify-items: center;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 5rem 5rem;
-  width: 100%;
-  height: auto;
+main .portafolioIn {
   background-color: lavender; }
-  main .portafolioIndex img {
-    width: 100%;
+  main .portafolioIn .portafolioIndex {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    grid-auto-rows: auto;
+    gap: .9rem;
+    width: 90%;
     height: auto; }
+    main .portafolioIn .portafolioIndex img {
+      width: 100%;
+      height: auto; }
 
 main .bioIndex {
   width: 70rem;
@@ -885,53 +886,64 @@ main .bioIndex {
     main .bioIndex button {
       font-size: 1.6rem; } }
 
-@media only screen and (max-width: 499px) {
-  main .portafolioIndex {
-    gap: 1.3rem;
-    padding: 5rem 1.1rem; }
-    main .portafolioIndex img {
-      width: 75%;
-      height: auto; } }
+@media only screen and (max-width: 456px) {
+  main .portafolioIn .portafolioIndex {
+    width: 85%;
+    height: auto; } }
 
-@media only screen and (min-width: 500px) and (max-width: 623px) {
-  main .portafolioIndex {
-    gap: 1.2rem;
-    padding: 5rem 1.5rem; }
-    main .portafolioIndex img {
-      width: 73%;
-      height: auto; } }
+@media only screen and (min-width: 457px) and (max-width: 565px) {
+  main .portafolioIn .portafolioIndex {
+    padding: 5rem 4rem; } }
 
-@media only screen and (min-width: 624px) and (max-width: 747px) {
-  main .portafolioIndex {
-    gap: 1.2rem; }
-    main .portafolioIndex img {
-      width: 75%;
-      height: auto; } }
+@media only screen and (min-width: 566px) and (max-width: 682px) {
+  main .portafolioIn .portafolioIndex {
+    width: 50%;
+    height: auto; } }
 
-@media only screen and (min-width: 739px) and (max-width: 747px) {
-  main .portafolioIndex {
-    padding: 5rem 4rem;
-    gap: 1.2rem 0; }
-    main .portafolioIndex img {
-      width: 95%;
-      height: auto; } }
+@media only screen and (min-width: 683px) and (max-width: 844px) {
+  main .portafolioIn .portafolioIndex {
+    width: 85%;
+    height: auto; } }
 
-@media only screen and (min-width: 768px) and (max-width: 924px) {
-  main .portafolioIndex {
-    padding: 5rem 4.5rem; }
-    main .portafolioIndex img {
-      width: 90%;
-      height: auto; } }
+@media only screen and (min-width: 845px) and (max-width: 975px) {
+  main .portafolioIn .portafolioIndex {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    width: 70%;
+    height: auto; } }
 
-@media only screen and (min-width: 761px) and (max-width: 793px) {
-  main .portafolioIndex {
-    padding: 5rem 4.5rem;
-    gap: 1.2rem 0; }
-    main .portafolioIndex img {
-      width: 95%;
-      height: auto; } }
+@media only screen and (min-width: 976px) and (max-width: 1033px) {
+  main .portafolioIn .portafolioIndex {
+    width: 90%;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); }
+    main .portafolioIn .portafolioIndex .a, main .portafolioIn .portafolioIndex .b {
+      display: none; } }
 
-.mainPortafolio {
+@media only screen and (min-width: 1034px) and (max-width: 1101px) {
+  main .portafolioIn .portafolioIndex {
+    width: 85%;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); }
+    main .portafolioIn .portafolioIndex .a, main .portafolioIn .portafolioIndex .b {
+      display: none; } }
+
+@media only screen and (min-width: 1100px) and (max-width: 1255px) {
+  main .portafolioIn .portafolioIndex {
+    width: 80%;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); }
+    main .portafolioIn .portafolioIndex .a, main .portafolioIn .portafolioIndex .b {
+      display: none; } }
+
+@media only screen and (min-width: 1256px) and (max-width: 1311px) {
+  main .portafolioIn .portafolioIndex {
+    width: 70%;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); }
+    main .portafolioIn .portafolioIndex .a, main .portafolioIn .portafolioIndex .b {
+      display: none; } }
+
+main .mainPortafolio {
   max-width: 1200px;
   margin: 1rem auto 6rem auto;
   display: grid;
@@ -942,28 +954,48 @@ main .bioIndex {
   gap: 2rem;
   width: 100%;
   height: auto; }
-  .mainPortafolio img {
+  main .mainPortafolio img {
     width: 100%;
     height: auto;
     display: block; }
-  @media only screen and (max-width: 467px) {
-    .mainPortafolio {
-      padding: 0 1.1rem; } }
-  @media only screen and (min-width: 468px) and (max-width: 628px) {
-    .mainPortafolio {
-      padding: 0 4rem; } }
-  @media only screen and (min-width: 628px) and (max-width: 727px) {
-    .mainPortafolio {
-      padding: 0 8rem; } }
-  @media only screen and (min-width: 728px) and (max-width: 801px) {
-    .mainPortafolio {
-      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); } }
-  @media only screen and (min-width: 979px) and (max-width: 1152px) {
-    .mainPortafolio {
-      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); } }
-  @media only screen and (min-width: 728px) and (max-width: 1289px) {
-    .mainPortafolio {
-      padding: 0 3.5rem; } }
+
+@media only screen and (max-width: 467px) {
+  main .mainPortafolio {
+    width: 90%;
+    height: auto; }
+    main .mainPortafolio img {
+      width: 90%;
+      height: auto; } }
+
+@media only screen and (min-width: 468px) and (max-width: 628px) {
+  main .mainPortafolio {
+    padding: 0 3rem;
+    width: 90%;
+    height: auto; }
+    main .mainPortafolio img {
+      width: 90%;
+      height: auto; } }
+
+@media only screen and (min-width: 628px) and (max-width: 727px) {
+  main .mainPortafolio {
+    padding: 0 8rem; } }
+
+@media only screen and (min-width: 728px) and (max-width: 801px) {
+  main .mainPortafolio {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); } }
+
+@media only screen and (min-width: 979px) and (max-width: 1152px) {
+  main .mainPortafolio {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    width: 90%;
+    height: auto; }
+    main .mainPortafolio img {
+      width: 90%;
+      height: auto; } }
+
+@media only screen and (min-width: 728px) and (max-width: 1289px) {
+  main .mainPortafolio {
+    padding: 0 3.5rem; } }
 
 footer .containerRight form input {
   border: #CBB5F5 solid .1rem;
