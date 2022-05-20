@@ -558,7 +558,7 @@ footer {
       .mainBio .textBio p a {
         color: #c7aef5; }
   .mainBio article {
-    max-width: 1400px;
+    max-width: 87.5rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -628,7 +628,7 @@ footer {
   row-gap: 2.3rem;
   align-items: center;
   justify-items: center;
-  max-width: 1400px;
+  max-width: 87.5rem;
   margin: .9rem auto 6rem auto;
   width: 100%;
   height: auto; }
@@ -738,7 +738,7 @@ main .productosIndex {
         line-height: 2.2rem; }
       main .productosIndex .productoIndex div button {
         margin-top: 1.5rem;
-        padding: .8rem;
+        padding: .8rem 1.2rem;
         border: #8f5bd8 solid .03rem;
         font-size: 1.3rem;
         border-radius: 0.20rem;
@@ -758,7 +758,7 @@ main .productosIndex {
 main .portafolioIn {
   background-color: lavender; }
   main .portafolioIn .portafolioIndex {
-    max-width: 1400px;
+    max-width: 87.5rem;
     margin: 0 auto;
     padding: 5rem 0;
     display: grid;
@@ -944,7 +944,7 @@ main .bioIndex {
       display: none; } }
 
 main .mainPortafolio {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 1rem auto 6rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));

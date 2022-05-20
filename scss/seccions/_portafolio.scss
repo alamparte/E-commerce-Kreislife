@@ -1,7 +1,7 @@
 @import "../utilities/mixins";
 main{
     .mainPortafolio{
-        max-width: 1200px;
+        max-width: 75rem;
         margin: 1rem auto 6rem auto;
         display: grid; 
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); 
